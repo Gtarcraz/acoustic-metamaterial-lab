@@ -1,43 +1,61 @@
 # Local Resonators
 
-A local acoustic resonator can be a side branch attached to a main tube.
+A local acoustic resonator can be a side branch attached to the main tube.
 
-```text
-main tube ─────┬─────
-               │
-               │  L_r
-               │
-```
-
-The branch stores acoustic energy near its resonance. Around that frequency, the branch behaves like a sound trap and can reduce sound transmission.
-
-For a closed side branch, the simplest estimate is the quarter-wave resonance:
+## Quarter-wave estimate
 
 \[
 f_\text{res} \approx \frac{c}{4L_r}
 \]
 
-## Geometry meaning
+This is a first design estimate.
 
-The app now uses geometry controls instead of abstract strength sliders:
+## Better branch impedance model
+
+For a closed side branch,
+
+\[
+Z_\text{branch} \approx -j Z_r \cot(kL_r)
+\]
+
+The app uses a neck plus branch matrix. If
+
+\[
+M_b =
+\begin{bmatrix}
+A_b & B_b \\
+C_b & D_b
+\end{bmatrix}
+\]
+
+and the branch is closed at the end, \(U_\text{end}=0\), then
+
+\[
+Z_b=\frac{A_b}{C_b}
+\]
+
+The shunt admittance is
+
+\[
+Y_b=\frac{1}{Z_b}
+\]
+
+and the shunt matrix is
+
+\[
+S_b=
+\begin{bmatrix}
+1&0\\
+Y_b&1
+\end{bmatrix}
+\]
+
+This is the acoustic analog of a shunt LC resonator in an EM transmission line.
+
+## Geometry meaning
 
 - \(L_r\): resonator length
 - \(W_r\): resonator width
-- \(W_n\): neck width connecting the branch to the main pipe
-
-### Design intuition
-
-- Longer branch \(L_r\) → lower resonant frequency.
-- Shorter branch \(L_r\) → higher resonant frequency.
-- Wider neck \(W_n\) → stronger coupling to the main pipe.
-- Wider branch \(W_r\) → larger local resonator region.
-- More resonators → deeper transmission dip.
-- Higher loss → less sharp resonance, often less amplification.
-
-## Example
-
-If \(L_r = 0.086\,\text{m}\),
-
-\[
-f_\text{res} \approx \frac{343}{4(0.086)} \approx 997\,\text{Hz}
-\]
+- \(W_n\): neck width
+- wider neck \(W_n\) means stronger coupling
+- longer branch \(L_r\) means lower resonance
