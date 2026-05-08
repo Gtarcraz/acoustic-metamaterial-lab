@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#101828"/>
+<g fill="#475467"><path d="M0 0 L160 70 L0 140Z"/><path d="M0 160 L160 230 L0 300Z"/><path d="M0 320 L160 390 L0 460Z"/><path d="M0 480 L160 550 L0 620Z"/></g>
+<g fill="#667085"><path d="M1200 0 L1040 70 L1200 140Z"/><path d="M1200 160 L1040 230 L1200 300Z"/><path d="M1200 320 L1040 390 L1200 460Z"/><path d="M1200 480 L1040 550 L1200 620Z"/></g>
+<text x="600" y="330" text-anchor="middle" fill="#f2f4f7" font-family="Arial" font-size="48">Acoustic Application Image</text>
+<text x="600" y="390" text-anchor="middle" fill="#d0d5dd" font-family="Arial" font-size="28">Anechoic chamber / sound-control wedges</text>
+</svg>

@@ -1,0 +1,25 @@
+site_name: Acoustic Metamaterial Lab Theory
+site_description: Theory notes for the Acoustic Metamaterial Lab web app
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Longitudinal Sound Waves: sound_waves.md
+  - Bragg Scattering: bragg.md
+  - Local Resonators: local_resonators.md
+  - App Model: app_model.md
+  - Link to EM Metamaterials: em_metamaterials.md
+  - Classroom Activity: classroom.md
+  - References: references.md
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
