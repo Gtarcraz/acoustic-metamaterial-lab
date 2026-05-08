@@ -20,16 +20,28 @@ button:hover,.docButton:hover{filter:brightness(.96)}
 .application{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center}
 .application img{width:100%;max-height:300px;object-fit:cover;border-radius:18px;border:1px solid #d0d5dd}
 .credit{font-size:13px;color:#667085}
+.qrCard{display:grid;grid-template-columns:1fr 220px;gap:18px;align-items:center}
+.qrCard img{width:220px;height:220px;object-fit:contain;border-radius:18px;border:1px solid #d0d5dd;background:white;padding:10px}
+.qrUrl{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f9fafb;border:1px solid #eef2f7;border-radius:12px;padding:10px;word-break:break-all}
 .theoryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.theoryCard{background:#f9fafb;border:1px solid #eef2f7;border-radius:18px;padding:16px}
-.theoryCard pre{background:#0f172a;color:#f8fafc;border-radius:12px;padding:12px;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.tubeSvg{width:100%;height:310px;background:#fbfcff;border-radius:18px;border:1px solid #eef2f7}
-.scatterer{stroke:#2563eb;stroke-width:5;stroke-linecap:round;opacity:.65}
-.branch{stroke:#f97316;stroke-width:5;stroke-linecap:round}
-.branchPressure{fill:#fed7aa;stroke:#ea580c;stroke-width:2}
+.theoryCard,.equationCard{background:#f9fafb;border:1px solid #eef2f7;border-radius:18px;padding:16px}
+.theoryCard pre,.equation{background:#0f172a;color:#f8fafc;border-radius:12px;padding:12px;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.equationsPanel{background:linear-gradient(180deg,#ffffff,#f8fbff)}
+.equationGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.designHint{color:#0f172a;font-weight:700}
+.tubeSvg{width:100%;height:400px;background:#fbfcff;border-radius:18px;border:1px solid #eef2f7}
+.tubeOutline{fill:none;stroke:#0f172a;stroke-width:2.5}
+.tubeOutlineMini{stroke:#0f172a;stroke-width:3}
+.centerLine{stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:7 5}
+.cellDivider{stroke:#cbd5e1;stroke-width:1;stroke-dasharray:4 4}
+.branchBox{stroke:#7c2d12;stroke-width:1.4}
 .svgTitle{font-size:19px;font-weight:800;fill:#344054}
-.tinyLabel{font-size:12px;fill:#2563eb;font-weight:800}
+.svgSubtitle{font-size:14px;fill:#667085}
+.tinyLabel{font-size:11px;fill:#2563eb;font-weight:800}
+.branchLabel{font-size:11px;fill:#9a3412;font-weight:700}
 .label{font-size:14px;fill:#475467;font-weight:700}
+.legendBg{fill:white;stroke:#e5e7eb;filter:drop-shadow(0 6px 12px rgba(15,23,42,.08))}
+.legendText{font-size:12px;fill:#344054;font-weight:700}
 .metricRow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
 .metricRow div{background:#f9fafb;border-radius:16px;padding:12px}
 .metricRow b{display:block;color:#475467;font-size:13px}
@@ -44,10 +56,13 @@ textarea{width:100%;height:90px;margin:8px 0;font-family:ui-monospace,monospace;
 table{width:100%;border-collapse:collapse}
 td,th{border-bottom:1px solid #eef2f7;padding:8px;text-align:left}
 td:first-child{font-weight:800;color:#344054}
-@media(max-width:980px){main{padding:12px}.grid{grid-template-columns:1fr}.hero{align-items:flex-start;gap:16px;flex-direction:column}h1{font-size:26px}.metricRow{grid-template-columns:1fr 1fr}.application{grid-template-columns:1fr}.theoryGrid{grid-template-columns:1fr}}
+@media(max-width:980px){
+main{padding:12px}
+.grid{grid-template-columns:1fr}
+.hero{align-items:flex-start;gap:16px;flex-direction:column}
+h1{font-size:26px}
+.metricRow{grid-template-columns:1fr 1fr}
+.application,.qrCard,.theoryGrid,.equationGrid{grid-template-columns:1fr}
+.qrCard img{width:180px;height:180px}
+}
 @media(max-width:620px){.metricRow{grid-template-columns:1fr}}
-
-.qrCard{display:grid;grid-template-columns:1fr 220px;gap:18px;align-items:center}
-.qrCard img{width:220px;height:220px;object-fit:contain;border-radius:18px;border:1px solid #d0d5dd;background:white;padding:10px}
-.qrUrl{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f9fafb;border:1px solid #eef2f7;border-radius:12px;padding:10px;word-break:break-all}
-@media(max-width:980px){.qrCard{grid-template-columns:1fr}.qrCard img{width:180px;height:180px}}
