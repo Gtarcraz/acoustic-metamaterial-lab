@@ -33,6 +33,12 @@ The included workflow builds the Vite app, builds the MkDocs theory site, copies
 
 If your repository name is not `acoustic-metamaterial-lab`, update `base` in `vite.config.js`.
 
+## Documentation
+
+```text
+https://gtarcraz.github.io/acoustic-metamaterial-lab/docs/
+```
+
 ## Classroom QR Code
 
 Live app URL after deployment:
