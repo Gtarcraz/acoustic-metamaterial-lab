@@ -120,3 +120,23 @@ and plots
 \[
 T(f)=|S_{21}(f)|
 \]
+
+## Cell-count convention used in the app
+
+The app now uses this convention so the geometry is visually and physically clear:
+
+- **0 unit cells** = one uniform large pipe. This should behave like a matched plain pipe.
+- **1 unit cell** = one narrow section inserted between large pipe sections.
+- **N unit cells** = N narrow sections / constrictions, always with large pipe at the speaker and microphone ends.
+
+The input and output ports are always matched to the large pipe impedance. Internal reflections come from the width changes inside the structure, not from an artificial microphone mismatch.
+
+For example, with Bragg enabled:
+
+```text
+0 cells:  W ───────────────── W
+1 cell :  W ───── w ───── W
+2 cells:  W ───── w ───── W ───── w ───── W
+```
+
+where `W` is the large pipe width and `w` is the narrow pipe width.

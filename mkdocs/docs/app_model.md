@@ -68,3 +68,21 @@ The app computes \(Z_b\) from a neck section and a closed side branch section.
 ## Visualization
 
 Red means compression and blue means rarefaction. The pressure envelope is estimated using prefix transfer matrices.
+
+## Plain-pipe and unit-cell sanity check
+
+A matched uniform pipe should only add phase delay:
+
+\[
+S_{21}=e^{-jkL}, \qquad |S_{21}|=1
+\]
+
+Therefore, with **0 unit cells**, no side branches, and zero loss, the app should show nearly flat transmission at 1.
+
+When the unit-cell count is 1, the app inserts one narrow section between large pipe sections. This creates two internal width transitions:
+
+\[
+W \rightarrow w \rightarrow W
+\]
+
+Those two internal transitions can reflect sound, but the final microphone/load side remains matched to the large pipe.
